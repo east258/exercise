@@ -1,0 +1,54 @@
+\ProvidesPackage{exercise}
+\usepackage{rotating}
+\usepackage{fbox}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{ctex}
+\usepackage{amsthm}
+\usepackage{mathabx}
+\usepackage{fancyhdr}
+\geometry{a4paper,scale=0.7}
+\setlength{\headsep}{15pt}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage} 
+\lhead{\LaTeX}
+
+\newcommand{\two}{
+~\\ ~\\
+
+}
+
+\newcommand{\four}{
+~\\ ~\\ ~\\ ~\\
+
+}
+
+\newcommand{\eight}{
+~\\ ~\\ ~\\ ~\\ ~\\ ~\\ ~\\ ~\\
+
+}
+
+\hbadness=10000
+
+\newcounter{qu}
+\stepcounter{qu}
+\newcommand{\quiz}{\arabic{qu}.\stepcounter{qu}}
+
+\newcommand{\answer}[1]
+{   ~\\
+    \begin{turn}{180}
+        \fbox{\parbox{145mm}{#1}}
+    \end{turn}
+    ~\\
+}
+
+
+\newcommand{\tit}[1]{\centerline{\textbf{
+    \begin{fontsize}{18pt}{20pt}
+        #1
+    \end{fontsize}
+        }}
+        }
